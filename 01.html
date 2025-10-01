@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     Alunos Aprovados
@@ -5,5 +6,17 @@ Você possui um array de notas de alunos: [8.5, 3.7, 6.9, 7.0, 5.2].
 Peça para o usuário adicionar uma nova nota. Depois, usando for...of, conte quantos alunos foram aprovados, considerando que a nota de corte estabelecida foi 6.0.
 Exiba o número total de alunos aprovados.
     */
-
+//Entrada
+let notasdealunos = [8.5, 3.7, 6.9, 7.0, 5.2];
+const novanota = Number(prompt(`Informe uma nova nota para colocar na lista`))
+//processamento
+let passados = 0;
+notasdealunos.push(novanota)
+for (nota of notasdealunos){
+    if (nota > 6) {
+  passados++
+    }
+}
+//Saida
+document.write(`A quantidade de alunos aprovados é ${passados}`)
 </script>

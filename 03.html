@@ -6,5 +6,18 @@ Peça para o usuário inserir a temperatura do dia anterior (ontem) e também a 
 Ou seja, são duas entradas fornecidas pelos usuários (dois prompts).
 Calcule a média de temperaturas que estão no Array e apresente para o usuário qual foi a média calculada.
     */
-
+//Entrada
+temperaturas = [25.5, 27.0, 24.8, 28.1, 29.3, 26.5, 25.9];
+temperaturaontem = Number(prompt(`Informe a temperatura de ontem`));
+temperaturaanteontem = Number(prompt(`Informe a temperatura de anteontem`))
+//processamento
+let soma = 0;
+temperaturas.push(temperaturaanteontem)
+temperaturas.push(temperaturaontem)
+for (temperatura of temperaturas){
+    soma = soma + temperatura
+}
+let media = soma / temperaturas.length;
+//saida
+document.write(`A média de temperaturas é ${media.toFixed(2)}`)
 </script>

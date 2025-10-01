@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     Validador de E-mails
@@ -6,5 +7,17 @@ Peça para o usuário informar o endereço de e-mail que possui e, após o usuá
 Usando for...of, crie um novo array contendo apenas os e-mails que são considerados "válidos" (para este exercício, um e-mail válido é aquele que contém o caractere "@").
 Exiba a lista de e-mails válidos.
     */
-
+//Entrada
+let emails = ["contato@site.com", "user.g", "aluno@escola.org", "teste"];
+const novoEmail = prompt(`Informe o seu endereço de email`)
+//processamneto 
+emails.push(novoEmail)
+let emaisvalidados = [];
+for(email of emails){
+for (caracter of email){
+    if (caracter == "@"){
+        emaisvalidados.push(email)
+    }}}
+//saida
+document.write(`Sua lidtas de emails validados é ${emaisvalidados}`)
 </script>
