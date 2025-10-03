@@ -7,5 +7,15 @@ Você precisa, baseando-se no conteúdo deste Array, descobrir qual a palavra ma
 Apresente para o usuário qual é a palavra mais longa contida no Array.
     */
 //Entrada
-
+palavras = ['javascript', 'html', 'css', 'desenvolvimento', 'web'];
+const nomeUsuario = prompt(`Informe o seu nome`);
+//Processamento
+palavras.push(nomeUsuario);
+let palavramaior = [];
+for(palavra of palavras){
+    if(palavra.length > palavramaior.length){
+        palavramaior = palavra
+    }
+}
+document.write(`A maior palavra é a ${palavramaior}`)
 </script>
