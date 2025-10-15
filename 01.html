@@ -13,7 +13,7 @@ const novanota = Number(prompt(`Informe uma nova nota para colocar na lista`))
 let passados = 0;
 notasdealunos.push(novanota)
 for (nota of notasdealunos){
-    if (nota > 6) {
+    if (nota >= 6) {
   passados++
     }
 }
